@@ -1,0 +1,1 @@
+Scaffold-DbContext "Name=ConnectionStrings:AssignmentDeltaXString" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
