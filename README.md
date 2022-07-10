@@ -8,6 +8,7 @@ Key attraction in this assignment :
 2.) Use of Dependency Injection
 3.) Separate and clean code to maintain project
 4.) Use of swaggerUI
+5.) Transaction in EF
 
 
 How to run this?
