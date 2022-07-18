@@ -1,6 +1,4 @@
-# IMDB_AssignmentDeltaX
- 
-This is Assignment project by DeltaX company.
+# DEMO API FOR IMDB
 
 Key attraction in this assignment :
 
