@@ -1,6 +1,6 @@
 # DEMO API FOR IMDB
 
-Key attraction in this assignment :
+Key attraction in this Dummy API :
 
 1.) Use of user secret for connection string <br />
 2.) Use of Dependency Injection <br />
