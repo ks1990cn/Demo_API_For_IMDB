@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AssignmentDeltaXAPI.Models;
 using AssignmentDeltaXAPI.UtilityMethods.AddMovieControllerMethods;
+using AssignmentDeltaXAPI.UtilityMethods.GetActorMethods;
 
 namespace AssignmentDeltaXAPI
 {
@@ -35,6 +36,7 @@ namespace AssignmentDeltaXAPI
             });
             services.AddDbContext<AssignmentDeltaXContext>();
             services.AddSingleton<IAddMovieControllerUtilsMethod, AddMovieControllerUtilsMethod>();
+            services.AddSingleton<IGetActors, GetActors>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

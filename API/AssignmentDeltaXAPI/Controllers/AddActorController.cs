@@ -1,4 +1,7 @@
-﻿using AssignmentDeltaXAPI.Models;
+﻿using AssignmentDeltaXAPI.Filters;
+using AssignmentDeltaXAPI.Models;
+using AssignmentDeltaXAPI.UtilityMethods.GetActorMethods;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NonSchemaModels;
@@ -13,8 +16,10 @@ namespace AssignmentDeltaXAPI.Controllers
     public class AddActorController : ControllerBase
     {
         private AssignmentDeltaXContext AssignmentDeltaXContext;
-        public AddActorController(AssignmentDeltaXContext AssignmentDeltaXContext)
+        private IGetActors _actors;
+        public AddActorController(AssignmentDeltaXContext AssignmentDeltaXContext, IGetActors actors)
         {
+            this._actors = actors;
             this.AssignmentDeltaXContext = AssignmentDeltaXContext;
         }
         [HttpPost]
@@ -27,5 +32,13 @@ namespace AssignmentDeltaXAPI.Controllers
             if (result == 1) return Ok(actor);
             return BadRequest();
         }
-    }
+
+        [HttpGet]
+        [Route("/GetActor")]
+        [AuthorizationFilter]
+        public ActionResult<List<ActorModel>> GetActors()
+        {
+            return Ok(this._actors.ReturnListOfActors(AssignmentDeltaXContext));
+        }
+}
 }
