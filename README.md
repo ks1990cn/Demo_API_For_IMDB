@@ -9,7 +9,9 @@ Key attraction in this assignment :
 3.) Separate and clean code to maintain project
 4.) Use of swaggerUI
 5.) Transaction in EF
-
+6.) Unit Test Cases
+7.) Mocking of DBContext (https://docs.microsoft.com/en-us/ef/ef6/fundamentals/testing/mocking?redirectedfrom=MSDN)
+8.) Filters
 
 How to run this?
 **Make sure to have SQL Server 18 and VS19 / 22.
