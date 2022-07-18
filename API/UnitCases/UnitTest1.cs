@@ -27,12 +27,12 @@ namespace UnitCases
         public void actor_Details()
         {
             var mockActor = new Mock<DbSet<Actor>>();
-            mockActor.As<IQueryable<Actor>>().Setup(a => a.GetEnumerator()).Returns(GetActors().GetEnumerator());
+            mockActor.As<IList<Actor>>().Setup(a => a.GetEnumerator()).Returns(GetActors().GetEnumerator());
             _context.Setup(a => a.Actors).Returns(mockActor.Object);
             getActors.ReturnListOfActors(_context.Object);
         }
 
-        IQueryable<Actor> GetActors()
+        IList<Actor> GetActors()
         {
             return new List<Actor>()
             {
@@ -40,7 +40,7 @@ namespace UnitCases
                 {
                     ActorName ="Hey"
                 }
-            }.AsQueryable();
+            };
         }
 
     }
