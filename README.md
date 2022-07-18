@@ -21,3 +21,13 @@ How to run this? <br />
    d.) Open PM Command note and in this folder and copy the command <br />
 2.) Goto API and open .sln file, then PM Console and paste the command in it. <br />
 3.) Build and run. <br />
+
+<br />
+<br />
+Here are few screenshots to visualize:
+<br />
+![3-edit-movie](https://user-images.githubusercontent.com/29522704/179511711-0037bd54-9230-494b-b38c-dd44b3527f1e.png)
+![2-create-movie](https://user-images.githubusercontent.com/29522704/179511724-80bda0b6-a045-4c6f-b28c-e653022be6de.png)
+![1-list-movies](https://user-images.githubusercontent.com/29522704/179511732-bd39f7d6-8576-463c-9b6b-19ad59e4bdf6.png)
+![5-create-producer](https://user-images.githubusercontent.com/29522704/179511737-c5537b79-acf1-4483-90ae-65780892e459.png)
+![4-create-actor](https://user-images.githubusercontent.com/29522704/179511746-ff54e5b9-46ca-475c-8926-48c8f8c0712a.png)
