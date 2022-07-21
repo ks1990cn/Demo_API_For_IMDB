@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonSchemaModels", "NonSchem
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitCases", "UnitCases\UnitCases.csproj", "{EDEE5AED-F2FA-46BA-84C6-AEA2DC647BE8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APISecurityModels", "APISecurityModels", "{9C3E6438-0C10-4968-8F54-739B21E6569A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "APISecurity", "APISecurity", "{9C3E6438-0C10-4968-8F54-739B21E6569A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{C63E4076-08AA-4DA3-85F1-9336056DA58B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "Security\Security.csproj", "{C63E4076-08AA-4DA3-85F1-9336056DA58B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
