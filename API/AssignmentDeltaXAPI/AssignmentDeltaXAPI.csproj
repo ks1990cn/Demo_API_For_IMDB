@@ -17,6 +17,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NonSchemaModels\NonSchemaModels.csproj" />
+    <ProjectReference Include="..\Security\Security.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Middlewares\" />
   </ItemGroup>
 
 </Project>
