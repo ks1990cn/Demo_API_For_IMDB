@@ -10,6 +10,7 @@ Key attraction in this Dummy API :
 6.) Unit Test Cases <br />
 7.) Mocking of DBContext (https://docs.microsoft.com/en-us/ef/ef6/fundamentals/testing/mocking?redirectedfrom=MSDN) <br />
 8.) Filters <br />
+9.) Custom Middleware <br />
 
 How to run this? <br />
 **Make sure to have SQL Server 18 and VS19 / 22. <br />
