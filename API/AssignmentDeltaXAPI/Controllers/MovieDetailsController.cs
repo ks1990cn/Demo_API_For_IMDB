@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using NonSchemaModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -55,8 +56,9 @@ namespace AssignmentDeltaXAPI.Controllers
                 }
                 resultMovies.Add(getMovieModel);
             }
-
+            Debug.WriteLine("returned from get result");
             return Ok(resultMovies);
+            
         }
 
     }

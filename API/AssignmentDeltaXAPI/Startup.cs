@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using AssignmentDeltaXAPI.Models;
 using AssignmentDeltaXAPI.UtilityMethods.AddMovieControllerMethods;
 using AssignmentDeltaXAPI.UtilityMethods.GetActorMethods;
+using AssignmentDeltaXAPI.Middlewares;
 
 namespace AssignmentDeltaXAPI
 {
@@ -37,6 +38,7 @@ namespace AssignmentDeltaXAPI
             services.AddDbContext<AssignmentDeltaXContext>();
             services.AddSingleton<IAddMovieControllerUtilsMethod, AddMovieControllerUtilsMethod>();
             services.AddSingleton<IGetActors, GetActors>();
+            services.AddTransient<CustomMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +56,8 @@ namespace AssignmentDeltaXAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<CustomMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
