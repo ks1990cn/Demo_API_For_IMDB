@@ -9,6 +9,10 @@ namespace AssignmentDeltaXAPI.Middlewares
 {
     public class CustomMiddleware : IMiddleware
     {
+        public CustomMiddleware()
+        {
+
+        }
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             Debug.WriteLine("Hey");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomValidation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,7 @@ namespace NonSchemaModels
     /// </summary>
     public class ActorModel
     {
+        [NameValidation]
         public string ActorName { get; set; }
         public string Bio { get; set; }
         public DateTime? Dob { get; set; }

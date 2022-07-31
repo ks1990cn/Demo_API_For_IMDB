@@ -1,4 +1,5 @@
-﻿using AssignmentDeltaXAPI.Models;
+﻿using AssignmentDeltaXAPI.Filters;
+using AssignmentDeltaXAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 
 namespace AssignmentDeltaXAPI.Controllers
 {
+    [ErrorFilter]
     [ApiController]
     public class MovieDetailsController : ControllerBase
     {
