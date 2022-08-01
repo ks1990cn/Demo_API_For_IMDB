@@ -21,7 +21,7 @@ namespace AssignmentDeltaXAPI.Controllers
         {
             this.xContext = xContext;
         }
-        [HttpPost]
+        [HttpGet]
         [Route("/GetMovie")]
         public  ActionResult<List<GetMovieModel>> GetMovie()
         {
