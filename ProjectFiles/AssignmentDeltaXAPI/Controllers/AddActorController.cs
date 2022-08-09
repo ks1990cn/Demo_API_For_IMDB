@@ -35,7 +35,7 @@ namespace AssignmentDeltaXAPI.Controllers
 
         [HttpGet]
         [Route("/GetActor")]
-        [AuthorizationFilter]
+        //[AuthorizationFilter]
         public ActionResult<List<ActorModel>> GetActors()
         {
             return Ok(this._actors.ReturnListOfActors(AssignmentDeltaXContext));

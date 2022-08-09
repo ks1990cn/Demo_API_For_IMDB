@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using NonSchemaModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -44,8 +45,10 @@ namespace AssignmentDeltaXAPI.Controllers
 
                     await transaction.CommitAsync();
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Debug.WriteLine(ex.Message);
+
                     await transaction.RollbackAsync();
                 }
 
