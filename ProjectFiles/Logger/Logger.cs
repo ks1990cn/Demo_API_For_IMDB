@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Logger
 {
-   public static class Logger
+    public static class Logger
     {
-        public static void LogInOutput(string message)
+        public static void Debug(string message)
         {
-            Debug.WriteLine("Log : " + message);
+            System.Diagnostics.Debug.WriteLine("Log : " + message);
         }
     }
 }

@@ -22,6 +22,7 @@ namespace Client
             } while (a.Key != ConsoleKey.Q);
             
         }
+        
         static void Main(string[] args)
         {
             try
@@ -32,7 +33,8 @@ namespace Client
                 //    })
                 //    .Build()
                 //    .Run();
-                Logger.Logger.LogInOutput("Starting Main");
+
+                Logger.Logger.Debug("Starting couple of threads");
 
                 NotificationThread.Start();
                 InputThread.Start();
