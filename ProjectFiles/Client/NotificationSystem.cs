@@ -21,7 +21,6 @@ namespace Client
 
                 if (prevResponse != responseBody)
                 {
-                    Console.Clear();
                     Console.WriteLine(responseBody);
                 }
                 prevResponse = responseBody;
