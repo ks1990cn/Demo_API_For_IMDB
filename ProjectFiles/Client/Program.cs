@@ -32,13 +32,16 @@ namespace Client
                 //    })
                 //    .Build()
                 //    .Run();
+                Logger.Logger.LogInOutput("Starting Main");
 
                 NotificationThread.Start();
                 InputThread.Start();
+
+                //When Task is done thread goes back to pool for reuse.
             }
             catch (Exception)
             {
-
+                
             }
         }
     }

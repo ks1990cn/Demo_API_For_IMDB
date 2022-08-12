@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomValidation", "CustomV
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleClient", "ConsoleClient", "{A3112C32-C45C-4FD6-BE4C-7E9AEDD174A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{7CF099BB-9118-46F8-9B77-4D4D822B887A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{7CF099BB-9118-46F8-9B77-4D4D822B887A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{7CF099BB-9118-46F8-9B77-4D4D822B887A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CF099BB-9118-46F8-9B77-4D4D822B887A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CF099BB-9118-46F8-9B77-4D4D822B887A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
