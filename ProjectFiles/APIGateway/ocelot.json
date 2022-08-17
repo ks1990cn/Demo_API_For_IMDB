@@ -1,0 +1,21 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:49977"
+  },
+  "ReRoutes": [
+    {
+      "UpstreamPathTemplate": "/GetMovie",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 25158
+        }
+      ],
+      "DownstreamPathTemplate": "/GetMovie"
+    }
+  ]
+}
