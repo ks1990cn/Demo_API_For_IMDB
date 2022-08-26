@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WeatherForecastMicroservice.Microservices;
 
 namespace WeatherForecastMicroservice
 {
@@ -31,6 +32,7 @@ namespace WeatherForecastMicroservice
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WeatherForecastMicroservice", Version = "v1" });
             });
+            services.AddTransient<CustomMiddleware>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,11 +48,19 @@ namespace WeatherForecastMicroservice
             app.UseRouting();
 
             app.UseAuthorization();
+            
+            //This is used when we need to create any middleware for specific path
+            app.UseWhen(a=>a.Request.Path.ToString().Contains("WeatherForecast"),HandleForThisRouteOnly);
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private void HandleForThisRouteOnly(IApplicationBuilder app)
+        {
+            app.UseMiddleware<CustomMiddleware>();
         }
     }
 }
