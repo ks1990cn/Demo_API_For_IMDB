@@ -3,6 +3,7 @@
     "BaseUrl": "https://localhost:49977"
   },
   "ReRoutes": [
+    //This is for IMDB API
     {
       "UpstreamPathTemplate": "/GetMovie",
       "UpstreamHttpMethod": [
@@ -16,6 +17,21 @@
         }
       ],
       "DownstreamPathTemplate": "/GetMovie"
+    },
+    //This is to get from WeatherForecast Microservice
+    {
+      "UpstreamPathTemplate": "/wf",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 42446
+        }
+      ],
+      "DownstreamPathTemplate": "/WeatherForecast"
     }
   ]
 }

@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logger", "Logger\Logger.csproj", "{E82CA3AB-DB5D-4FE5-B99F-1064CAD93E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIGateway", "APIGateway\APIGateway.csproj", "{6C281C3C-8DC5-4490-8C3E-1F15B4008638}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGateway", "APIGateway\APIGateway.csproj", "{6C281C3C-8DC5-4490-8C3E-1F15B4008638}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecastMicroservice", "WeatherForecastMicroservice\WeatherForecastMicroservice.csproj", "{E7A1C908-6675-4B72-B452-27EAD6B59FBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{6C281C3C-8DC5-4490-8C3E-1F15B4008638}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C281C3C-8DC5-4490-8C3E-1F15B4008638}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C281C3C-8DC5-4490-8C3E-1F15B4008638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7A1C908-6675-4B72-B452-27EAD6B59FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A1C908-6675-4B72-B452-27EAD6B59FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A1C908-6675-4B72-B452-27EAD6B59FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A1C908-6675-4B72-B452-27EAD6B59FBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
