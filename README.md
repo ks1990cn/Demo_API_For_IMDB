@@ -12,6 +12,7 @@ Key attraction in this Dummy API :
 8.) Filters <br />
 9.) Custom Middleware <br />
 10.) Custom Validation   <br />
+11.) Microservice API Gateway using Ocelot   <br />
 
 How to run this? <br />
 **Make sure to have SQL Server 18 and VS19 / 22. <br />
