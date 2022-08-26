@@ -13,9 +13,10 @@ Key attraction in this Dummy API :
 9.) Custom Middleware <br />
 10.) Custom Validation   <br />
 11.) Microservice API Gateway using Ocelot   <br />
+12.) Gzip Response compression in startup file, added controller to demo this <br />.
 
 How to run this? <br />
-**Make sure to have SQL Server 18 and VS19 / 22. <br />
+**Make sure to have atleast SQL Server 18 and VS19 / 22. <br />
 
 1.) Goto Database folder run in following order <br />
    a.) AssignmentScript - Table and Database Creation <br />
