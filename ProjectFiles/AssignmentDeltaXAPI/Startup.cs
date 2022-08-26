@@ -15,6 +15,7 @@ using AssignmentDeltaXAPI.Models;
 using AssignmentDeltaXAPI.UtilityMethods.AddMovieControllerMethods;
 using AssignmentDeltaXAPI.UtilityMethods.GetActorMethods;
 using AssignmentDeltaXAPI.Middlewares;
+using Microsoft.AspNetCore.ResponseCompression;
 
 namespace AssignmentDeltaXAPI
 {
@@ -35,6 +36,7 @@ namespace AssignmentDeltaXAPI
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AssignmentDeltaXAPI", Version = "v1" });
             });
+            services.AddResponseCompression(options => options.Providers.Add<GzipCompressionProvider>());
             services.AddDbContext<AssignmentDeltaXContext>();
             services.AddSingleton<IAddMovieControllerUtilsMethod, AddMovieControllerUtilsMethod>();
             services.AddSingleton<IGetActors, GetActors>();
@@ -58,6 +60,8 @@ namespace AssignmentDeltaXAPI
             app.UseAuthorization();
 
             app.UseMiddleware<CustomMiddleware>();
+
+            app.UseResponseCompression();
 
             app.UseEndpoints(endpoints =>
             {
