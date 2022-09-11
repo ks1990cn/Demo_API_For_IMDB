@@ -18,16 +18,9 @@ namespace AssignmentDeltaXAPI.UtilityMethods.GetMovieDetails
                 getMovieModel.MovieName = movie.MovieName;
                 getMovieModel.Plot = movie.Plot;
                 getMovieModel.Poster = movie.Poster;
-                if (producers.ContainsKey(movie.Producerid))
-                {
-                    var producer = producers[movie.Producerid];
-                    getMovieModel.Producer = new();
-                    getMovieModel.Producer.Bio = producer.Bio;
-                    getMovieModel.Producer.Company = producer.Company;
-                    getMovieModel.Producer.Dob = producer.Dob;
-                    getMovieModel.Producer.Gender = producer.Gender;
-                    getMovieModel.Producer.ProducerName = producer.ProducerName;
-                }
+
+                GetMovieProducer(producers, movie, getMovieModel);
+
                 if (moviesToActors.ContainsKey(movie.MovieId))
                 {
                     foreach (var actorId in moviesToActors[movie.MovieId])
@@ -37,6 +30,20 @@ namespace AssignmentDeltaXAPI.UtilityMethods.GetMovieDetails
                     }
                 }
                 resultMovies.Add(getMovieModel);
+            }
+        }
+
+        private static void GetMovieProducer(Dictionary<int, Producer> producers, Movie movie, GetMovieModel getMovieModel)
+        {
+            if (producers.ContainsKey(movie.Producerid))
+            {
+                var producer = producers[movie.Producerid];
+                getMovieModel.Producer = new();
+                getMovieModel.Producer.Bio = producer.Bio;
+                getMovieModel.Producer.Company = producer.Company;
+                getMovieModel.Producer.Dob = producer.Dob;
+                getMovieModel.Producer.Gender = producer.Gender;
+                getMovieModel.Producer.ProducerName = producer.ProducerName;
             }
         }
     }
