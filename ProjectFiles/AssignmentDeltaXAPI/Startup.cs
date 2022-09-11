@@ -16,6 +16,7 @@ using AssignmentDeltaXAPI.UtilityMethods.AddMovieControllerMethods;
 using AssignmentDeltaXAPI.UtilityMethods.GetActorMethods;
 using AssignmentDeltaXAPI.Middlewares;
 using Microsoft.AspNetCore.ResponseCompression;
+using AssignmentDeltaXAPI.UtilityMethods.GetMovieDetails;
 
 namespace AssignmentDeltaXAPI
 {
@@ -41,6 +42,8 @@ namespace AssignmentDeltaXAPI
             services.AddSingleton<IAddMovieControllerUtilsMethod, AddMovieControllerUtilsMethod>();
             services.AddSingleton<IGetActors, GetActors>();
             services.AddTransient<CustomMiddleware>();
+            //services.AddTransient<IGetMovies, NewGetMovies>();
+            services.AddTransient<IGetMovies, GetMovies>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
